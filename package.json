@@ -12,6 +12,7 @@
   "author": "Nick Bohannan",
   "license": "MIT",
   "dependencies": {
+    "express": "*",
     "gh-pages": "^1.2.0",
     "node-sass": "^4.9.2"
   }
