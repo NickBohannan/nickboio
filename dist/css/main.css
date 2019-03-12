@@ -168,7 +168,17 @@ main {
     border: #758a46 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
+  .about-info .devicon-javascript-plain,
+  .about-info .devicon-nodejs-plain-wordmark,
+  .about-info .devicon-express-original-wordmark,
+  .about-info .devicon-postgresql-plain-wordmark,
+  .about-info .devicon-sequelize-plain-wordmark,
+  .about-info .devicon-heroku-plain-wordmark,
+  .about-info .devicon-react-original-wordmark,
+  .about-info .devicon-css3-plain {
+    font-size: 4rem;
+    padding-right: 10px; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
