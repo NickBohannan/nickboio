@@ -128,6 +128,10 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem; }
+  h1.btm,
+  h2.btm,
+  h3.btm {
+    margin-bottom: 5px; }
 
 a {
   color: #fff;
@@ -191,6 +195,7 @@ main {
     border-bottom: #758a46 5px solid; }
 
 .projects {
+  padding-bottom: 20px;
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr); }
@@ -237,6 +242,14 @@ main {
 .btn-light {
   background: #c6b6a4;
   color: #333; }
+
+.open-source-container {
+  display: flex;
+  justify-content: center; }
+
+.open-source {
+  padding: 10px;
+  text-align: center; }
 
 #main-footer {
   text-align: center;

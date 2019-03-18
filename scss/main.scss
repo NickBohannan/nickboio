@@ -30,6 +30,10 @@ h3 {
         padding: 0.2rem 1rem;
         //background: rgba(lighten($primary-color, 2), 0.5);
     }
+
+    &.btm {
+        margin-bottom: 5px;
+    }
 }
 
 a {
@@ -124,6 +128,9 @@ main {
 }
 // Work/Projects
 .projects {
+
+    padding-bottom: 20px;
+
     display: grid;
     grid-gap: 0.7rem;
     grid-template-columns: repeat(3, 1fr);
@@ -188,6 +195,16 @@ main {
     @extend .btn;
     background: lighten($primary-color, 50);
     color: #333;
+}
+
+.open-source-container {
+    display: flex;
+    justify-content: center;
+}
+
+.open-source {
+    padding: 10px;
+    text-align: center;
 }
 
 #main-footer {
