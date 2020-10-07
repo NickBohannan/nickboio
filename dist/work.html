@@ -48,14 +48,59 @@
             </ul>
         </nav>
     </header>
-
-    <main id="work">
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="numbertext">1 / 6</div>
+        <!-- <div class="mySlides">
+            <img src="img/projects/landingpage.png" alt="" style="width:100%" srcset="">
+            <img src="img/projects/landingpage2.png" alt="" style="width:100%" srcset="">
+            <img src="img/projects/login.png" alt="" style="width:100%" srcset="">
+            <img src="img/projects/search.png" alt="" style="width:100%" srcset="">
+            <img src="img/projects/signup.png" alt="" style="width:100%" srcset="">
+            <img src="img/projects/singleorder.png" alt="" style="width:100%" srcset="">
+        </div> -->
+        <img class="mySlides" src="img/projects/landingpage.png" alt="" style="width:100%" srcset="">
+        <img class="mySlides" src="img/projects/landingpage2.png" alt="" style="width:100%" srcset="">
+        <img class="mySlides" src="img/projects/login.png" alt="" style="width:100%" srcset="">
+        <img class="mySlides" src="img/projects/search.png" alt="" style="width:100%" srcset="">
+        <img class="mySlides" src="img/projects/signup.png" alt="" style="width:100%" srcset="">
+        <img class="mySlides" src="img/projects/singleorder.png" alt="" style="width:100%" srcset="">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <main id=" work">
         <h1 class="lg-heading">
             My
             <span class="text-secondary">Work</span>
         </h1>
         <h2 class="sm-heading">
-            Check out some of my projects (give heroku about 5 seconds to spool the servers)!
+            Spotlight Project: PAL Provider Portal
+            <a href="https://github.com/NickBohannan/paldoctest" class="btn-dark quarter">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </h2>
+        <div class="projects">
+            <div class="item">
+                <img id="myImg" src="img/projects/landingpage.png" onclick="openModal();currentSlide(1);" alt="Project">
+            </div>
+            <div class="item">
+                <img src="img/projects/landingpage2.png" onclick="openModal();currentSlide(2);" alt="Project">
+            </div>
+            <div class="item">
+                <img src="img/projects/login.png" onclick="openModal();currentSlide(3);" alt="Project">
+            </div>
+            <div class="item">
+                <img src="img/projects/search.png" onclick="openModal();currentSlide(4);" alt="Project">
+            </div>
+            <div class="item">
+                <img src="img/projects/signup.png" onclick="openModal();currentSlide(5);" alt="Project">
+            </div>
+            <div class="item">
+                <img src="img/projects/singleorder.png" onclick="openModal();currentSlide(6);" alt="Project">
+            </div>
+        </div>
+        <h2 class="sm-heading">
+            Check out my other projects!
         </h2>
         <div class="projects">
             <div class="item">
@@ -66,7 +111,7 @@
                     <i class="fas fa-eye"></i> Houndstooth Woodwerk
                 </a>
                 <a href="https://github.com/NickBohannan/houndstooth" class="btn-dark">
-                    <i class="fab fa-github"></i> Github
+                    <i class="fab fa-github"></i> GitHub
                 </a>
                 <p>A React frontend for a family member's woodworking business.</p>
             </div>
@@ -75,9 +120,10 @@
                     <img src="img/projects/project2.png" alt="Project">
                 </a>
                 <a href="https://github.com/NickBohannan/bomeddb" class="btn-dark">
-                    <i class="fab fa-github"></i> BOMED DB on Github
+                    <i class="fab fa-github"></i> GitHub
                 </a>
-                <p>A PostgreSQL database portal built with a Node.js backend with Sequelize and EJS template engine.</p>
+                <p>A PostgreSQL database portal built with a Node.js backend with Sequelize and EJS template engine.
+                </p>
             </div>
             <div class="item">
                 <a href="https://www.dmeprovider.com/">
@@ -96,7 +142,7 @@
                     <i class="fas fa-eye"></i> Old Portfolio Site
                 </a>
                 <a href="https://github.com/NickBohannan/personalsite" class="btn-dark">
-                    <i class="fab fa-github"></i> Github
+                    <i class="fab fa-github"></i> GitHub
                 </a>
                 <p>Old portfolio site using React.</p>
             </div>
@@ -110,7 +156,7 @@
             </div>
         </div>
         <div class="open-source-container">
-            <h2>And much more on Github!</h2>
+            <h2>And much more on GitHub!</h2>
         </div>
     </main>
 
@@ -119,6 +165,44 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        function openModal() {
+            document.querySelector("#myModal").style.display = "block";
+            document.querySelector(".menu-btn").style.display = "none"
+        }
+
+        function closeModal() {
+            document.querySelector("#myModal").style.display = "none";
+            document.querySelector(".menu-btn").style.display = "block"
+        }
+
+        var slideIndex = 1;
+
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.querySelectorAll(".mySlides");
+            const numberText = document.querySelector(".numbertext");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            numberText.innerHTML = slideIndex + " / " + slides.length
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
 
 </html>

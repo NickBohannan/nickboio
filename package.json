@@ -11,8 +11,9 @@
   "author": "Nick Bohannan",
   "license": "MIT",
   "dependencies": {
-    "node-static": "*",
     "gh-pages": "^1.2.0",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.9.2",
+    "node-static": "*",
+    "sass": "^1.26.12"
   }
 }
