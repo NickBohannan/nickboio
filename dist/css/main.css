@@ -262,7 +262,9 @@ main#home h1 {
 .modal {
   display: none;
   position: fixed;
-  z-index: 2;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
   padding-top: 100px;
   left: 0;
   top: 0;
