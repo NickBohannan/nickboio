@@ -223,7 +223,9 @@ main#home h1 {
 .about-info .devicon-sequelize-plain-wordmark,
 .about-info .devicon-heroku-plain-wordmark,
 .about-info .devicon-react-original-wordmark,
-.about-info .devicon-css3-plain {
+.about-info .devicon-css3-plain,
+.about-info .devicon-angularjs-plain-wordmark,
+.about-info .devicon-dot-net-plain-wordmark {
   font-size: 4rem;
   padding-right: 10px;
 }
