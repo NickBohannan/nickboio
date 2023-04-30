@@ -10,7 +10,7 @@
   "author": "Nick Bohannan",
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^1.2.0",
+    "gh-pages": "^5.0.0",
     "node-static": "*",
     "serve-favicon": "^2.5.0"
   }
